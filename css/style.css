@@ -278,12 +278,29 @@ a:focus {
     position: relative;
     text-align: right;
     padding-right: 75px;
+    overflow: hidden;  /* Ensures the image doesn't overflow its container */
 }
 
+/* Initial state of the image */
 .hero .hero-image img {
+    transition: transform 0.4s ease, filter 0.4s ease;
     max-width: 120%;
     max-height: 120%;
+    object-fit: cover;  /* Ensure the image covers the container without distortion */
+    transform-origin: center center;  /* Set the transform origin for 3D effect */
 }
+
+/* Apply 3D effect on hover */
+.hero .hero-image:hover img {
+    transform: scale(1.1) rotateY(10deg) rotateX(10deg) translate3d(0, -15px, 30px); 
+    filter: brightness(0.9);  /* Dim the image slightly on hover for better focus */
+}
+
+/* Optional: If you want the image to be slightly tilted when hovered */
+/* .hero .hero-image:hover img {
+    transform: scale(1.1) rotateY(10deg) rotateX(10deg) translate3d(0, -20px, 50px);
+} */
+
 
 .hero .hero-content {
     position: relative;
