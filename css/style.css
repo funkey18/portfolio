@@ -133,6 +133,7 @@ a:focus {
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
+/* Navbar Styles */
 .navbar {
     position: relative;
     transition: .5s;
@@ -153,7 +154,6 @@ a:focus {
     font-weight: 700;
     letter-spacing: 2px;
     transition: .5s;
-    
 }
 
 .navbar .navbar-brand img {
@@ -168,6 +168,7 @@ a:focus {
     background: #f8f9fa;
 }
 
+/* For larger screens */
 @media (min-width: 992px) {
     .navbar {
         position: absolute;
@@ -177,16 +178,16 @@ a:focus {
         border-bottom: 1px dashed rgba(256, 256, 256, .2);
         z-index: 9;
     }
-    
+
     .navbar.nav-sticky {
         padding: 10px 60px;
         background: #ffffff !important;
     }
-    
+
     .navbar .navbar-brand {
         color: #ffffff;
     }
-    
+
     .navbar.nav-sticky .navbar-brand {
         color: #EF233C;
     }
@@ -198,7 +199,7 @@ a:focus {
         font-size: 15px;
         font-weight: 500;
     }
-    
+
     .navbar-light.nav-sticky .navbar-nav .nav-link,
     .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
         color: #414141;
@@ -208,31 +209,46 @@ a:focus {
     .navbar-light .navbar-nav .nav-link.active {
         color: #111111;
     }
-    
+
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
     .navbar-light.nav-sticky .navbar-nav .nav-link.active {
         color: #EF233C;
     }
 }
 
+/* For mobile screens */
 @media (max-width: 991.98px) {   
     .navbar {
         padding: 15px;
         background: #ffffff !important;
     }
-    
+
+    /* Ensure navbar brand and toggler are on the same row */
+    .navbar .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .navbar .navbar-brand {
         color: #EF233C;
+        font-size: 30px;  /* You can adjust font-size here if needed */
     }
-    
+
+    .navbar .navbar-toggler {
+        border: none;
+        background: transparent;
+    }
+
+    /* Navbar items should align to the right */
     .navbar .navbar-nav {
-        margin-top: 15px;
+        margin-top: 0;
     }
-    
+
     .navbar a.nav-link {
         padding: 5px;
     }
-    
+
     .navbar .dropdown-menu {
         box-shadow: none;
     }
@@ -543,6 +559,10 @@ a:focus {
 }
 
 @media (max-width: 991.98px) {
+    .about .about-img{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .about .about-content {
         padding: 45px 15px 0 15px;
     }
