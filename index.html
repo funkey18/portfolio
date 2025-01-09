@@ -28,7 +28,29 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">FashionFolio</a>
+                <a href="index.html" class="navbar-brand">
+                    <!-- SVG Logo for Ruvik Fashion -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="180" height="100" viewBox="0 0 180 100">
+                        <!-- Define shadow filter -->
+                        <defs>
+                            <filter id="f1" x="0" y="0" width="150%" height="150%">
+                                <feOffset result="offOut" in="SourceAlpha" dx="3" dy="3" />
+                                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+                                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                            </filter>
+                        </defs>
+                    
+                        <!-- R Letter with shadow -->
+                        <text x="10" y="50" font-family="Arial" font-size="50" fill="red" font-weight="bold" filter="url(#f1)">R</text>
+                    
+                        <!-- V Letter with shadow -->
+                        <text x="50" y="50" font-family="Arial" font-size="50" fill="red" font-weight="bold" filter="url(#f1)">V</text>
+                    
+                        <!-- "Ruvik Fashion" Text (Centered below the RV) -->
+                        <text x="-30" y="80" font-family="Arial" font-size="20" fill="#333" font-weight="bold">Ruvik Fashion</text>
+                    </svg>
+                    
+                </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
