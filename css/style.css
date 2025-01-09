@@ -154,18 +154,15 @@ a:focus {
     font-weight: 700;
     letter-spacing: 2px;
     transition: .5s;
+    display: flex;
+    align-items: center;
 }
 
-.navbar .navbar-brand img {
+/* Ensure the logo scales appropriately */
+.navbar .navbar-brand svg {
     max-width: 100%;
-    max-height: 40px;
-}
-
-.navbar .dropdown-menu {
-    margin-top: 0;
-    border: 0;
-    border-radius: 0;
-    background: #f8f9fa;
+    height: auto;
+    max-height: 60px; /* Adjusted logo size */
 }
 
 /* For larger screens */
